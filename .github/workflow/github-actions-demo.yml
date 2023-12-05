@@ -1,4 +1,5 @@
-name: GitHub Actions Demo
+name: Coveralls GitHub Action
+uses: coverallsapp/github-action@v2.2.3
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:

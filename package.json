@@ -1,15 +1,26 @@
 {
   "type": "module",
+  "scripts": {
+    "test": "mocha ./tests",
+    "coverage": "nyc mocha ./tests"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "test/**/*.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
   "devDependencies": {
     "chai": "^4.3.10",
     "coveralls": "^3.1.1",
     "mocha": "^10.2.0",
     "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^15.1.0"
-  },
-  "scripts": {
-    "test": "mocha \"tests/**/*.js\" --recursive",
-    "coverage": "nyc --reporter=lcov npm test && coveralls < coverage/lcov.info"
   }
-  
 }

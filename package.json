@@ -9,6 +9,7 @@
   },
   "scripts": {
     "test": "mocha \"tests/**/*.js\"",
-    "coverage": "nyc --reporter=lcov npm test && coveralls < coverage/lcov.info"
+    "coverage": "nyc --reporter=lcov npm test && coveralls < coverage/lcov.info",
+    "test-coverage": "npm run coverage"
   }
 }

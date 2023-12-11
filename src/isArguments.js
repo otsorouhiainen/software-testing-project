@@ -9,7 +9,7 @@ import isObjectLike from './isObjectLike.js'
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is an `arguments` object, else `false`.
  * @example
- *
+ *is arg
  * isArguments(function() { return arguments }())
  * // => true
  *

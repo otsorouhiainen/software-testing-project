@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import eq from './eq.js';
+import eq from '../src/eq.js';
 
 describe('eq function', () => {
   it('should return true for same values', () => {

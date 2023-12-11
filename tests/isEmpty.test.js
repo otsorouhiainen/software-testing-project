@@ -1,5 +1,5 @@
 import { expect } from 'chai'; 
-import isEmpty from './isEmpty.js'; 
+import isEmpty from '../src/isEmpty.js'; 
 describe('isEmpty function', () => {
   it('should return true for empty values', () => {
     expect(isEmpty(null)).to.be.true;

@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import compact from '../compact.js';
+import compact from '../src/compact.js';
 
 describe('compact function', () => {
   it('should remove all falsey values from the array', () => {

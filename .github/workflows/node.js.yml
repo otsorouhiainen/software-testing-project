@@ -16,7 +16,7 @@ jobs:
         run: |
           npm ci
           npm test
-          npm run coverage  # Assuming your coverage script is defined in your package.json
+          npm run coverage
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v2.2.3
         with:

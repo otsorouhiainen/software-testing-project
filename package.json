@@ -5,17 +5,10 @@
     "coverage": "nyc mocha ./tests"
   },
   "nyc": {
-    "include": [
-      "src/**/*.js"
-    ],
-    "exclude": [
-      "test/**/*.js"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ]
-  },
+    "include": ["src/**/*.js"],
+    "exclude": ["tests/**/*.js"]
+  }
+  ,
   "devDependencies": {
     "chai": "^4.3.10",
     "coveralls": "^3.1.1",

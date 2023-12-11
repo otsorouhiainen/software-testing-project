@@ -1,26 +1,24 @@
 {
   "type": "module",
   "scripts": {
-    "test": "mocha ./tests",
-    "coverage": "nyc mocha ./tests"
+    "test": "mocha ./tests/**/*test.js",
+    "coverage": "c8 --reporter=lcov --reporter=text mocha --exit ./tests/**/*test.js"
   },
-  "nyc": {
-    "include": [
-      "src/**/*.js"
-    ],
-    "exclude": [
-      "test/**/*.js"
-    ],
+  "c8": {
+    "include": "src",
+    "exclude": "tests",
+    "report-dir": "./coverage",
+    "check-coverage": true,
+    "lines": 90,
     "reporter": [
-      "lcov",
-      "text"
+      "text",
+      "cobertura"
     ]
   },
   "devDependencies": {
+    "c8": "^7.7.1",
     "chai": "^4.3.10",
     "coveralls": "^3.1.1",
-    "mocha": "^10.2.0",
-    "mocha-lcov-reporter": "^1.3.0",
-    "nyc": "^15.1.0"
+    "mocha": "^10.2.0"
   }
 }
